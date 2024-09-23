@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: NS Remove Related Products for WooCommerce\n"
+"POT-Creation-Date: 2019-02-21 16:17+0100\n"
+"PO-Revision-Date: 2019-02-21 16:18+0100\n"
+"Last-Translator: \n"
+"Language-Team: nsthemes\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Flags-xgettext: --add-comments=_e\n"
+"X-Poedit-KeywordsList: _e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ns-admin-options/ns_admin_option_dashboard.php:59
+msgid "Save Changes"
+msgstr "Save Changes"
+
+#: ns-admin-options/ns_settings_box_newsletter.php:8
+msgid "SUBSCRIBE TO OUR NEWSLETTER"
+msgstr "SUBSCRIBE TO OUR NEWSLETTER"
+
+#: ns-admin-options/ns_settings_box_newsletter.php:13
+msgid "STAY TUNED!"
+msgstr "STAY TUNED!"
+
+#: ns-admin-options/ns_settings_box_newsletter.php:13
+msgid "Thanks to use our plugin! Submit your email to keep in touch!"
+msgstr "Thanks to use our plugin! Submit your email to keep in touch!"
+
+#: ns-admin-options/ns_settings_box_newsletter.php:18
+msgid "SUBSCRIBE!"
+msgstr "SUBSCRIBE!"
+
+#: ns-admin-options/ns_settings_box_pro_version.php:8
+msgid "PREMIUM VERSION"
+msgstr "PREMIUM VERSION"
+
+#: ns-admin-options/ns_settings_box_pro_version.php:11
+msgid "ALL FREE VERSION FEATURES and:"
+msgstr "ALL FREE VERSION FEATURES and:"
+
+#: ns-admin-options/ns_settings_box_pro_version.php:14
+msgid "UPGRADE!"
+msgstr "UPGRADE!"
+
+#: ns-admin-options/ns_settings_box_theme_promo.php:8
+msgid "JOIN NS CLUB"
+msgstr "JOIN NS CLUB"
+
+#: ns-admin-options/ns_settings_box_theme_promo.php:12
+msgid "– Instant access to all plugins and all themes"
+msgstr "– Instant access to all plugins and all themes"
+
+#: ns-admin-options/ns_settings_box_theme_promo.php:13
+msgid "– All future plugins and themes are included"
+msgstr "– All future plugins and themes are included"
+
+#: ns-admin-options/ns_settings_box_theme_promo.php:14
+msgid "– Unlimited license for all NS products"
+msgstr "– Unlimited license for all NS products"
+
+#: ns-admin-options/ns_settings_box_theme_promo.php:15
+msgid "– Unlimited download for each products"
+msgstr "– Unlimited download for each products"
+
+#: ns-admin-options/ns_settings_box_theme_promo.php:16
+msgid "– Super fast support"
+msgstr "– Super fast support"
+
+#: ns-admin-options/ns_settings_box_theme_promo.php:17
+msgid "– Regular update"
+msgstr "– Regular update"
+
+#: ns-admin-options/ns_settings_box_theme_promo.php:20
+msgid "DISCOVER MORE"
+msgstr "DISCOVER MORE"
+
+#: ns-admin-options/ns_settings_custom.php:10
+msgid "Enabled Plugin"
+msgstr "Enabled Plugin"
+
+#: ns-admin-options/ns_settings_custom.php:11
+msgid "Unselect to disabled plugin"
+msgstr "Unselect to disabled plugin"
+
+#~ msgid "Dismiss this notice"
+#~ msgstr "Dismiss this notice"
