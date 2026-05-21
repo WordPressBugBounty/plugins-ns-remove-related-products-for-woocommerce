@@ -112,7 +112,7 @@ if(!class_exists ('pluginEye')) {
 		private function addHiddenMenu () {
 			add_action( 'admin_menu', function()  {
 				$data = $this->getData();
-				add_submenu_page( '_doesnt_exist', 'PulginEye', '', 'manage_options', 'plugineye'.$data['plugin_id'], function(){
+				add_submenu_page( 'options-general.php', 'PluginEye', 'PluginEye', 'manage_options', 'plugineye'.$data['plugin_id'], function(){
 					$this->displayCatchData();
 				});
 			});
@@ -147,7 +147,7 @@ if(!class_exists ('pluginEye')) {
 			add_action( 'activated_plugin', function ( $plugin ) {
 				$data = $this->getData();
 				if( $plugin == $data['main_directory_name'].'/'.$data['main_file_name']) {      
-					exit( wp_redirect( admin_url( 'options.php?page=plugineye'.$data['plugin_id'] ) ) );
+					exit( wp_redirect( admin_url( 'options-general.php?page=plugineye'.$data['plugin_id'] ) ) );
 				}	
 			});
 		}
@@ -167,7 +167,7 @@ if(!class_exists ('pluginEye')) {
 		* thanks to plugineye API.
 		*/
 		private function pluginSandData($user){
-			if(isset($_POST['ns-response'])){  
+			if(isset($_POST['ns-response'])){
 				$data = $this->getData();
 				if($_POST['ns-response']=='Allow and continue'){
 					$user_data = $this->plugineyeUserData($user);

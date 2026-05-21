@@ -3,17 +3,46 @@
 Plugin Name: NS Remove Related Products for WooCommerce
 Plugin URI: http://nsthemes.com
 Description: Remove Related Products from your shop page
-Version: 2.3.10
+Version: 3.0.0
 Author: NsThemes
 Author URI: http://nsthemes.com
 Text Domain: ns-remove-related-products-for-woocommerce
 Domain Path: /i18n
+Requires Plugins: woocommerce
+Requires at least: 4.3
+Tested up to: 7.0
+WC requires at least: 3.0
+WC tested up to: 10.7
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
+
+
+function ns_rrpw_check_woocommerce_dependency() {
+    //if ( ! defined( 'WC_VERSION' ) ) {
+	if ( ! function_exists( 'WC' ) || ! version_compare( WC()->version, '3.0', '>=' ) ) {
+
+        add_action( 'admin_notices', function() {
+            echo '<div class="notice notice-error is-dismissible"><p>'
+                . sprintf(
+                    __( '<strong>NS Remove Related Products for WooCommerce</strong> requires %s version 3.0 or greater.', 'ns-remove-related-products-for-woocommerce' ),
+                    '<a href="https://wordpress.org/plugins/woocommerce/" target="_blank">WooCommerce</a>'
+                )
+                . '</p></div>';
+        });
+
+        deactivate_plugins( plugin_basename( __FILE__ ) );
+
+        if ( isset( $_GET['activate'] ) ) {
+            unset( $_GET['activate'] );
+        }
+    }
+}
+add_action( 'plugins_loaded', 'ns_rrpw_check_woocommerce_dependency' );
+
 
 
 /** 
@@ -52,6 +81,18 @@ function ns_rrpw_translate(){
 add_action('plugins_loaded','ns_rrpw_translate');
 
 
+// Dichiarazione compatibilità con HPOS (WooCommerce High-Performance Order Storage)
+add_action( 'before_woocommerce_init', function() {
+    if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
+        \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 
+            'custom_order_tables', 
+            __FILE__, 
+            true 
+        );
+    }
+});
+
+
 /* *** plugin review trigger *** */
 require_once( plugin_dir_path( __FILE__ ) .'/class/class-plugin-theme-review-request.php');
 
@@ -77,10 +118,11 @@ if (get_option('rrp_enabled_plugin', true)) {
 	add_action( 'wp_enqueue_scripts', 'ns_remove_related_css' );
 }
 
-function ns_remove_related_products( $args ) {
-	return array();
-}
-add_filter('woocommerce_related_products_args','ns_remove_related_products', 10); 
+
+/**
+ * Remove related products output
+ */
+add_filter('woocommerce_related_products', '__return_empty_array', 10);
 
 
 function ns_remove_related_free_options_group() {

@@ -3,7 +3,7 @@ Contributors: nsthemes
 Tags: remove related product, remove product, product woocommerce, remove related, related product remove, related remove, product remove, woocommerce, woocommerce product, remove woo related product, woo related product, woocommerce related product
 Requires at least: 4.3
 Tested up to: 6.1
-Stable tag: 2.3.10
+Stable tag: 3.0.0
 Domain Path: /i18n
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -40,6 +40,13 @@ Yes WooCommerce is required to use this plugin.
 == Screenshots ==
 
 == Changelog ==
+
+= 3.0.0 =
+* Tested for WordPress 7.0
+* Tested for WooCoomerce 10.7
+* PHP 8.5 Compatibility
+* WooCommerce HPOS Compatibility
+* Bug Fix
 
 = 2.3.10 =
 * Tested for WordPress 6.1
